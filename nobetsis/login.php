@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html lang="tr">
 <head>
-<title>Giriş | ODTÜ BİDB NöbetSis</title>
+<title>Giriş | Gözcü</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -51,28 +51,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 						<div class="signin">
 							<div class="sign-in-form-top">
-								<p><span>ODTÜ BİDB</span> <a href="index.html">NöbetSis Giriş</a></p>
+								<p><span>Gözcü</span> <a href="index.html"> Giriş</a></p>
 							</div>
 							<form action="index.php">
-							<div class="log-input">
-								<div class="log-input-center">
-								   <input type="text" class="user" value="Kullanıcı Adı" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Kullanıcı Adı:';}"/>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="log-input">
-								<div class="log-input-center">
-								   <input type="password" class="lock" value="Şifre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Şifre:';}"/>
-								</div>
+                                <div class="log-input">
+                                    <div class="log-input-center">
+                                       <input type="text" class="user" name="txbUsername" value="" placeholder="Kullanıcı Adı" required/>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+                                <div class="log-input">
+                                    <div class="log-input-center">
+                                       <input type="password" class="lock" name="txbPassword" value="" placeholder="Şifre" required/>
+                                    </div>
 
-								<div class="clearfix"> </div>
-							</div>
+                                    <div class="clearfix"> </div>
+                                </div>
 								<div class="log-input">
 									<div class="log-input-center">
-										<input class="log-input-button" type="submit" value="Giriş Yap" style="width: 100%">
+										<input class="log-input-button" name="btnLogin" type="submit" value="Giriş Yap" style="width: 100%">
 										<div class="clearfix"> </div>
 									</div>
 								</div>
+
+                                <div class="log-input">
+                                    <div class="log-input-center">
+                                        <a class="sign-in-form-btn" href="register.php"> Kayıt Ol</a>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                </div>
 
 							</form>
 						</div>
@@ -82,7 +89,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		<!--footer section start-->
 			<footer>
-				<p>&copy 2017 NöbetSis | <a href="http://cc.metu.edu.tr">ODTÜ BİDB</a> Tarafından Geliştirilmiştir | Template: w3Layouts</p>
+				<p>&copy 2017 Gözcü | <a href="http://ceit.metu.edu.tr">ODTÜ CEİT</a> Bölümü Tarafından Geliştirilmiştir | Template: w3Layouts</p>
 			</footer>
         <!--footer section end-->
 	</section>

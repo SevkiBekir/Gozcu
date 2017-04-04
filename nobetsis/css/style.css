@@ -4722,7 +4722,7 @@ span.badge1 {
 .signin-rit {
   padding: 0.3em 0em 0em 0em;
 }
-.log-input input[type="text"],.log-input input[type="password"] {
+.log-input input[type="text"],.log-input input[type="password"],.log-input input[type="email"] {
   font-size: 0.95em;
   padding: 10px 15px 10px 37px;
   width: 98%;
@@ -7629,4 +7629,27 @@ textarea.form-control1.control2 {
 	width: 20px;
 	height: 20px;
 	background-color: #27cce4;
+}
+
+.sign-in-form-btn {
+	font-size: 1.1em;
+	color: #fff;
+	background-color: #a51a27;
+	border: none;
+	padding: 0.7em 1em 0.7em 1em;
+	width: 88.5%;
+	margin-top: 0.5em;
+	display: block;
+	outline: none;
+	border-radius: 4px;
+	cursor:pointer;
+	width:100%;
+	text-align: center;
+}
+.sign-in-form-btn:hover {
+	background:#8BC34A;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
 }

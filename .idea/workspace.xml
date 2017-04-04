@@ -25,7 +25,38 @@
     <favorites_list name="gozcu" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nobetsis/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="72" column="69" lean-forward="true" selection-start-line="72" selection-start-column="69" selection-end-line="72" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nobetsis/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="89" column="143" lean-forward="false" selection-start-line="89" selection-start-column="143" selection-end-line="89" selection-end-column="143" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nobetsis/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="4724" column="92" lean-forward="false" selection-start-line="4724" selection-start-column="92" selection-end-line="4724" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,9 +68,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>type</find>
-      <find>log-input</find>
       <find>log-input-button</find>
       <find>.sign-in-form input[type=&quot;submit&quot;]</find>
+      <find>sig</find>
+      <find>log-input</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -91,11 +123,11 @@
         <option value="$PROJECT_DIR$/resultY.php" />
         <option value="$PROJECT_DIR$/result.php" />
         <option value="$PROJECT_DIR$/nobetsis/login.html" />
-        <option value="$PROJECT_DIR$/nobetsis/login.php" />
-        <option value="$PROJECT_DIR$/nobetsis/css/style.css" />
-        <option value="$PROJECT_DIR$/nobetsis/register.php" />
         <option value="$PROJECT_DIR$/nobetsis/header.php" />
         <option value="$PROJECT_DIR$/nobetsis/navbar.php" />
+        <option value="$PROJECT_DIR$/nobetsis/css/style.css" />
+        <option value="$PROJECT_DIR$/nobetsis/login.php" />
+        <option value="$PROJECT_DIR$/nobetsis/register.php" />
       </list>
     </option>
   </component>
@@ -136,6 +168,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gozcu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gozcu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gozcu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nobetsis" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -243,12 +289,12 @@
       <option name="presentableId" value="Default" />
       <updated>1490720084110</updated>
       <workItem from="1490720086768" duration="14052000" />
-      <workItem from="1491260115750" duration="3818000" />
+      <workItem from="1491260115750" duration="4464000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17870000" />
+    <option name="totallyTimeSpent" value="18516000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -261,9 +307,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15508886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15508886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -555,7 +601,7 @@
         <state relative-caret-position="-145860">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
             <marker date="1490720901000" expanded="true" signature="189016:189033" ph="..." />
             <marker date="1490720901000" expanded="true" signature="211387:211404" ph="..." />
             <marker date="1490720901000" expanded="true" signature="303796:303813" ph="..." />
@@ -612,22 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nobetsis/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="7646" column="22" lean-forward="false" selection-start-line="7646" selection-start-column="22" selection-end-line="7646" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nobetsis/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="81" column="34" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="81" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nobetsis/navbar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -648,14 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nobetsis/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="102" column="84" lean-forward="false" selection-start-line="102" selection-start-column="84" selection-end-line="102" selection-end-column="84" />
           <folding />
         </state>
       </provider>
@@ -699,7 +721,7 @@
         <state relative-caret-position="15">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#6#85#0#PHP" expanded="true" />
+            <element signature="e#6#85#0#PHP" expanded="false" />
             <marker date="1490750488000" expanded="true" signature="638:743" ph="SELECT id,ti... " />
           </folding>
         </state>
@@ -709,6 +731,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="64" column="22" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="64" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nobetsis/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="4724" column="92" lean-forward="false" selection-start-line="4724" selection-start-column="92" selection-end-line="4724" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nobetsis/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="72" column="69" lean-forward="true" selection-start-line="72" selection-start-column="69" selection-end-line="72" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nobetsis/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="89" column="143" lean-forward="false" selection-start-line="89" selection-start-column="143" selection-end-line="89" selection-end-column="143" />
           <folding />
         </state>
       </provider>
