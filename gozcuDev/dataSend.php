@@ -1,4 +1,5 @@
 <?php
+include_once "Dbug.php";
 session_start();
 $getTime = $_GET['time'];
 $getMouseX = $_GET['x'];
