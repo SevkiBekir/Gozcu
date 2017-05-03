@@ -13,6 +13,8 @@ EOF;
         echo $meta;
     }
 
+$_SESSION["userAttempt"] = 0;
+
 ?>
 <!-- main content start-->
 <div class="main-content main-content2 main-content2copy">

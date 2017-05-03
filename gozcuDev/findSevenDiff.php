@@ -1,6 +1,7 @@
 <?php
 include_once ("header.php");
 $_SESSION["page"] = "app";
+$_SESSION["applicationId"] = 1; //Daha sonra değişecek bu ! ! ! !
 $loggedin = false;
 if(isset($_SESSION['loggedin']))
     $loggedin = $_SESSION['loggedin'];

@@ -17,17 +17,12 @@ class User
 
     function __construct()
     {
-        if ($_SERVER['REMOTE_ADDR'] == "127.0.0.1"){
-            $servername = "localhost";
-            $username = "root";
-            $password = "123";
-            $database = "flash";
-        }else{
-            $servername = "localhost";
-            $username = "wwwgozcu";
-            $password = "tP2cVNhr";
-            $database = "wwwgozcu";
-        }
+
+        $servername = "myadmin.cc.metu.edu.tr:3306";
+        $username = "wwwgozcu";
+        $password = "tP2cVNhr";
+        $database = "wwwgozcu";
+
         $this->db = new mysqli($servername, $username, $password, $database);
         if($this->db->connect_error)
             die($this->db->connect_error);
@@ -117,3 +112,16 @@ class User
 
     }
 }
+
+$servername = "localhost";
+$username = "wwwgozcu";
+$password = "tP2cVNhr";
+$database = "wwwgozcu";
+
+$link = mysql_connect($servername, wwwgozcu, $password);
+if (!$link) {
+    die('Could not connect: ' . mysql_error());
+}
+
+echo 'Connected successfully';
+

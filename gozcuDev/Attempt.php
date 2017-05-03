@@ -7,17 +7,12 @@
  * Time: 01:16
  */
 include_once "Dbug.php";
-class Data
+class Attempt
 {
-    public $mouseX;
-    public $mouseY;
-    public $leftEyeX;
-    public $leftEyeY;
-    public $rightEyeY;
-    public $rightEyeX;
-    public $time;
-    public $username;
+    public $applicationId;
+    public $user;
     public $id;
+    public $status;
     private $db;
 
     function dbConnection (){
@@ -42,17 +37,17 @@ class Data
         return true;
     }
 
-    function insertDataByEyeTracker($leftX,$leftY,$rightX,$rightY,$username,$mouseX, $mouseY){
+    function insertAttempt($applicationId, $user, $status){
         if($this->dbConnection()){
             if (mysqli_connect_errno()) {
                 printf("Connect failed: %s\n", mysqli_connect_error());
                 exit();
             }
-            $sql = "INSERT INTO eyeTracker (leftX,leftY,rightX,rightY,username,mouseX,mouseY) VALUES(?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO attempts (applicationId,user,status) VALUES(?,?,?)";
 
             $stmt = $this->db->prepare($sql);
 
-            $stmt->bind_param("sssssss", $leftX, $leftY, $rightX,$rightY,$username,$mouseX,$mouseY);
+            $stmt->bind_param("sss", $applicationId, $user, $status);
 
             printf("%d Row inserted.\n", $stmt->affected_rows);
             return $stmt->execute();
