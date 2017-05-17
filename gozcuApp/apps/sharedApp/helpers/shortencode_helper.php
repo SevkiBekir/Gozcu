@@ -182,7 +182,7 @@
      * for PostgreSQL, echo Scheme Name
      */
     function printSchemeName(){
-        return "eLearningProject";
+        return "flash";
         
     }
 

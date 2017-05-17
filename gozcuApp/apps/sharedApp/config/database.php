@@ -76,7 +76,7 @@ $localips = array(
     '::1'
 );
 
-$active_group = in_array($_SERVER['REMOTE_ADDR'], $localips) ? 'sevki_local' : 'asim_local';
+$active_group = in_array($_SERVER['REMOTE_ADDR'], $localips) ? 'sevki_local' : 'gozcuDB';
 
 $query_builder = TRUE;
 
@@ -110,9 +110,9 @@ $db['sevki_local'] = array(
 $db['sevki_local'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'developUserDB',
-	'password' => 'DS31V1!B4rG',
-	'database' => 'eLearningProject',
+	'username' => 'root',
+	'password' => '123',
+	'database' => 'flash',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -131,7 +131,7 @@ $db['sevki_local'] = array(
 
 
 
-$db['asim_local'] = array(
+$db['gozcuDB'] = array(
     'dsn'	=> '',
     'hostname' => 'localhost',
     'username' => 'root',
@@ -152,5 +152,5 @@ $db['asim_local'] = array(
     'failover' => array(),
     'save_queries' => TRUE
 );
- 
+
 ?>

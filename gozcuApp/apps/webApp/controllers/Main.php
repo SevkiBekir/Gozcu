@@ -1,13 +1,13 @@
 <?php
- /**
-     * SemTech Co -> E-Learning Project
-     * @2016
-     * ************ T E A M ************
-     * Şevki KOCADAĞ -> bekirsevki@gmail.com
-     * Asim Dogan NAMLI -> asim.dogan.namli@gmail.com
-     * Okan KAYA -> okankaya93@gmail.com
-     * 
-     */
+/**
+ *
+ * @2017
+ * ************ T E A M ************
+ * Şevki KOCADAĞ -> bekirsevki@gmail.com
+ *
+ *
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class main extends CI_Controller {
@@ -27,37 +27,14 @@ class main extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index(){
-		$this->load->model('courses');
-        
-        $get=$this->courses->getCourseDetails(NULL, array('isActive'=>1));
-		
-		$i=0;
-        $data = [];
-		foreach($get as $row){
-			$getCatagoryName=$this->courses-> getCatagoryName($row->catagoryId);
-			$getDateDifference=$this->courses->getDateDifference($row->id);
-			$getCourseRating=$this->courses->getCourseRating($row->id);
-            $getCourseLink=$this->courses->getCourseLink($row->id)->name;
-            
-	        $data['a'.$i]=array('courseName'   =>  $row->name,
-	        			'courseSummary'        =>  $row->summary,
-	        			'courseUpdatedDate'    =>  $row->updatedDate,
-	        			'courseCatagoryName'   =>  $getCatagoryName->name,
-	        			'coursePrice'          =>  $row->price,
-	        			'courseDateDifference' =>  $getDateDifference->days,
-						'courseRating'         =>  intval($getCourseRating->stars),
-                        'courseLink'           =>  $getCourseLink,
-                        
-	        								);
-	        
-			$i++;
-		}
-		$myA = array('data'=> $data);
-		
-		//new dBug($myA);
-		loadView('main',$myA);
-		loadView('footer');
-		
-	}
+	public function index()
+    {
+
+        loadView("main");
+        loadView("footer");
+
+    }
 }
+
+
+?>

@@ -92,7 +92,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                     <div class="clearfix"> </div>
                                 </div>
-								<div class="log-input">
+                                <div class="log-input">
 									<div class="log-input-center">
 										<input class="log-input-button" name="btnRegister" type="submit" value="Kayıt Ol" style="width: 100%">
 										<div class="clearfix"> </div>
