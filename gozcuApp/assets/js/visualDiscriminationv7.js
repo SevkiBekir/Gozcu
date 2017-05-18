@@ -1,5 +1,6 @@
 (function (lib, img, cjs, ss, an) {
 
+	var assetAddres = "http://gozcu.local/gozcuApp/assets/";
 var p; // shortcut to reference prototypes
 lib.webFontTxtInst = {}; 
 var loadedTypekitCount = 0;
@@ -6883,10 +6884,10 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-		{src:"images/visualDiscriminationv7_atlas_.png", id:"visualDiscriminationv7_atlas_"},
-		{src:"sounds/complete.mp3", id:"complete"},
-		{src:"sounds/odaklanmasüresi.mp3", id:"odaklanmasüresi"},
-		{src:"sounds/oyununhikayesi.mp3", id:"oyununhikayesi"}
+		{src:assetAddres + "images/visualDiscriminationv7_atlas_.png", id:"visualDiscriminationv7_atlas_"},
+		{src:assetAddres + "sounds/complete.mp3", id:"complete"},
+		{src:assetAddres + "sounds/odaklanmasüresi.mp3", id:"odaklanmasüresi"},
+		{src:assetAddres + "sounds/oyununhikayesi.mp3", id:"oyununhikayesi"}
 	],
 	preloads: []
 };

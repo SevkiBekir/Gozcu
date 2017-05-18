@@ -29,12 +29,13 @@
 
 <?php
 
-if($_SESSION["page"] == "app")
+if(isset($js))
 {
 ?>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="<?php assetsUrl('js/visualDiscriminationv7.js'); ?>"></script>
+<script src="<?php assetsUrl('js/'.$js.'.js'); ?>"></script>
     <script>
+        //window.alert("he");
         var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
         function init() {
             canvas = document.getElementById("canvas");

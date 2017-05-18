@@ -1,5 +1,7 @@
 (function (lib, img, cjs, ss, an) {
 
+	var address =
+
 var p; // shortcut to reference prototypes
 lib.webFontTxtInst = {}; 
 var loadedTypekitCount = 0;

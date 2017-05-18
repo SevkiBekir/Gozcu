@@ -39,7 +39,7 @@
                             </div>
                         </a>
                         <ul class="dropdown-menu drp-mnu">
-                            <li> <a href="logout"><i class="fa fa-sign-out"></i> Çıkış Yap</a> </li>
+                            <li> <a href="<?=baseUrl(1,"logout")?>"><i class="fa fa-sign-out"></i> Çıkış Yap</a> </li>
                         </ul>
                     </li>
                     <div class="clearfix"> </div>

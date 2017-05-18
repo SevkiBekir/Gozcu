@@ -1,16 +1,7 @@
 <?php
-/**
- *
- * @2017
- * ************ T E A M ************
- * Şevki KOCADAĞ -> bekirsevki@gmail.com
- *
- *
- */
-
-
-include_once("header.php");
+include_once ("header.php");
 ?>
+    <!-- main content start-->
     <div class="main-content main-content2 main-content2copy">
     <!-- header-starts -->
     <div class="header-section">
@@ -26,14 +17,24 @@ include_once("header.php");
     <!-- //header-ends -->
     <div id="page-wrapper">
         <div class="graphs">
+            <div>
+                <ol class="breadcrumb">
+                    <li><a href="<?=baseUrl(1);?>">Anasayfa</a></li>
+                    <li class="active"><?=$catagoryName?></li>
+                </ol>
+            </div>
             <div class="activity_box" style="min-height:250px">
-                <h3>DUYURULAR!</h3>
+                <h3><?=$catagoryName?> Uygulamaları</h3>
                 <div class="activity-row activity-row1">
                     <div class="single-bottom">
                         <ul>
                             <li></li>
-                            <li>- Gözcü uygulaması hayata geçirilmiştir. </li>
-                            <li>- Uygulamalarımız sürekli güncellenmektedir. </li>
+                            <?php
+                            foreach ($applications as $row){
+                                echo "<li><a href='".baseUrl(0)."application/".$row["link"]."'>".$row["name"]."</a>";
+                            }
+                            ?>
+
                         </ul>
                     </div>
                 </div>

@@ -10,31 +10,37 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Class main
+ */
 class main extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-    {
+    /**
+     *
+     */
+    public function index(){
+
+	    // CATAGORY LINK
+        $this->load->model('catagories');
+        $catagories = $this->catagories->getCatagoryName();
+        $dummyArray=[];
+        $i=0;
+        foreach ($catagories as $row){
+            $dummyArray['c'.$i]=array(
+                'name'		        => $row->name,
+                'link'				=> $this -> catagories -> generateLinkAndSave($row->name,$row->id),
+            );
+            $i++;
+        }
+        session('catagories',$dummyArray);
+
+
+
 
         loadView("main");
         loadView("footer");
 
+
     }
 }
 
-
-?>

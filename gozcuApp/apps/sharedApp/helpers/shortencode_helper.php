@@ -1,13 +1,12 @@
 <?php
- /**
-     * SemTech Co -> E-Learning Project
-     * @2016
-     * ************ T E A M ************
-     * Şevki KOCADAĞ -> bekirsevki@gmail.com
-     * Asim Dogan NAMLI -> asim.dogan.namli@gmail.com
-     * Okan KAYA -> okankaya93@gmail.com
-     * 
-     */
+/**
+ *
+ * @2017
+ * ************ T E A M ************
+ * Şevki KOCADAĞ -> bekirsevki@gmail.com
+ *
+ *
+ */
     /**
      * $this->session->userData($key) yapısını kısaltır.
      * 
@@ -91,8 +90,7 @@
     function baseUrl($echo = 1, $file = ''){
         if($echo){
             echo get_instance()->config->base_url($file, NULL);
-        }
-        else{
+        }else{
             return get_instance()->config->base_url($file, NULL);
         }
     }
@@ -189,7 +187,7 @@
     /**
      * Prepare courseNameLink catagoryNameLink
      */
-    function prepareCourseNameLink($string){
+    function prepareNameLink($string){
 		$search = array('Ç','ç','Ğ','ğ','ı','İ','Ö','ö','Ş','ş','Ü','ü',' ');
 		$replace = array('C','c','G','g','i','I','O','o','S','s','U','u','-');
 		$new_text = str_replace($search,$replace,$string);
