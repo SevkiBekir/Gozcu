@@ -34,7 +34,7 @@ class login extends CI_Controller {
                  session('username', $this->users->username);
                  session('userFName', $this->users->firstname);
                  session('userLName', $this->users->lastname);
-
+                 changeEyeTackerStatus(0);
                  headerLocation("main");
 
              }else{

@@ -43,6 +43,7 @@ class application extends CI_Controller {
 
         $data["appLink"] = $uriLink;
         //new dBug($data);
+        changeEyeTackerStatus(0);
         loadView('levels',$data);
         loadView("footer");
 
@@ -51,17 +52,19 @@ class application extends CI_Controller {
 
     public function levels($appLink,$num){
 	   // echo $appLink."-> level-> ".$num;
-//        if(!isset($appLink,$num))
-//            headerLocation("main");
+        if(!isset($appLink,$num))
+            headerLocation("main");
 
         $this->load->model('catagories');
         $this->load->model('applications');
 
+
         $applicationId = $this->applications->getApplicationLink(NULL,$appLink)->applicationId;
         $applicationInfo = $this->applications->getApplicationInfo($applicationId);
         $applicationCatagoryId = $applicationInfo->catagoryId;
+        $applicationName = $applicationInfo->name;
 
-        if($getApplicationInfo = $this->applications->getApplicationLevelInfo($applicationCatagoryId,$num)){
+        if($getApplicationInfo = $this->applications->getApplicationLevelInfo($applicationCatagoryId,$num,$applicationName)){
 
             $catagoryName = $this->catagories->getCatagoryName($applicationCatagoryId)[0]->name;
             $catLink = $this -> catagories -> generateLinkAndSave($catagoryName,$applicationCatagoryId);
@@ -69,13 +72,15 @@ class application extends CI_Controller {
             $data["catagory"] = array("name" => $catagoryName, "link" => $catLink );
             $data["js"] = $getApplicationInfo->gameJs;
             $data["level"] = $getApplicationInfo->level;
-            //new dBug($data);
+
+            session('applicationId',$getApplicationInfo->id);
             loadView('application',$data);
             loadView("footer");
+            changeEyeTackerStatus(1);
 
 
         }else{
-           // headerLocation("main");
+            headerLocation("main");
 
         }
 

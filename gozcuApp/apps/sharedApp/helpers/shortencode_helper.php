@@ -195,15 +195,13 @@
         
     }
 
+    function scriptAlert($string){
+        echo "<script>window.alert($string);</script>";
+    }
 
+    function changeEyeTackerStatus($status){
+        get_instance()->session->unset_userdata("eyeTrackerStatus");
+        session("eyeTrackerStatus",$status);
 
+    }
 
-
-    function convert2LegendName ($name){
-            if($name=="Tamamlandı")
-                return "completed";
-            else if($name=="Devam Ediyor")
-                return "inprogress";
-            else if ($name="Başlanılmadı")
-                return "start";
-        }

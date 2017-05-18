@@ -156,17 +156,17 @@ class applications extends BaseModel {
         return $row[0];
     }
 
-    public function getApplicationLevelInfo($catagoryId = NULL,$level = NULL){
+    public function getApplicationLevelInfo($catagoryId = NULL,$level = NULL, $name){
         $table="applications a";
         $schemeVar=printSchemeName();
         if (findLocalOrNot()==true)
             $table=$schemeVar.".".$table;
 
 
-        if(isset($catagoryId,$level)){
+        if(isset($catagoryId,$level,$name)){
             $this->db->select('*')
                 ->from($table)
-                ->where(array('catagoryId'=>$catagoryId , 'level' => $level));
+                ->where(array('catagoryId'=>$catagoryId , 'level' => $level, 'name' => $name));
 
             $query=$this->db->get();
 

@@ -40,7 +40,7 @@ class catagory extends CI_Controller {
 //        new dBug($dummyArray);
         $data["applications"] = $dummyArray;
         $data["catagoryName"] = $catagoryName;
-
+        changeEyeTackerStatus(0);
         loadView('applicationList',$data);
         loadView("footer");
 

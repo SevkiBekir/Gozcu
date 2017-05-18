@@ -16,6 +16,7 @@ class logout extends CI_Controller {
         
 		$this->session->sess_destroy();
         headerLocation();
-        
-	}
+        changeEyeTackerStatus(false);
+
+    }
 }

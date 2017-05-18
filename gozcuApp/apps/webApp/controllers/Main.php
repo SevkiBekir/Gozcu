@@ -36,7 +36,7 @@ class main extends CI_Controller {
 
 
 
-
+        changeEyeTackerStatus(0);
         loadView("main");
         loadView("footer");
 
