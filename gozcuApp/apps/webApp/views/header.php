@@ -91,8 +91,7 @@ else {
             <!--sidebar nav start-->
             <ul class="nav nav-pills nav-stacked custom-nav">
 
-                <li><a href="<?php baseUrl() . "results"; ?>"><i
-                                class="lnr lnr-power-switch"></i><span>Sonuçlar<span></a></li>
+                <li><a href="<?php baseUrl(1,"result") ?>"><i class="lnr lnr-power-switch"></i><span>Sonuçlar<span></a></li>
 
                 <li class="menu-list">
                     <a href="#"><i class="lnr lnr-cog"></i>

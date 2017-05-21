@@ -58,6 +58,7 @@ $route['catagory/(:any)'] = 'catagory/index/$1';
 $route['application/(:any)'] = 'application/index/$1';
 //$route['application/(:any)/levels/'] = 'application/levels/';
 $route['application/(:any)/levels/(:any)'] = 'application/levels/$1/$2';
+$route['result/application/(:any)/filter'] = 'result/filter/$1';
 
 
 

@@ -56,7 +56,29 @@ class data extends BaseModel {
 
     }
 
+    function getDataForResult($start = NULL,$finish = NULL){
+        $table="data d";
+        $schemeVar=printSchemeName();
+        if (findLocalOrNot()==true)
+            $table=$schemeVar.".".$table;
 
+
+        if(isset($this->username,$start,$finish)){
+            $this->db->select('*')
+                ->from($table)
+                ->where(array('username'=> $this->username, 'date >=' => $start, 'date <=' => $finish))
+                ->order_by("id","ASC");
+
+            $query=$this->db->get();
+
+            $row=$query->result();
+            if ($row)
+                return $row;
+            else
+                return false;
+        }
+        return false;
+    }
 
 
 

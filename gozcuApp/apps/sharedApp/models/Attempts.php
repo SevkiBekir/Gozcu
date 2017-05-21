@@ -43,6 +43,30 @@ class attempts extends BaseModel {
     }
 
 
+    function getAttemptsForResults(){
+        $table="attempts a";
+        $schemeVar=printSchemeName();
+        if (findLocalOrNot()==true)
+            $table=$schemeVar.".".$table;
+
+
+        if(isset($this->username,$this->applicationId)){
+            $this->db->select('*')
+                ->from($table)
+                ->where(array('username'=> $this->username, 'applicationId' => $this->applicationId));
+
+            $query=$this->db->get();
+
+            $row=$query->result();
+            if ($row)
+                return $row;
+            else
+                return false;
+        }
+        return false;
+    }
+
+
 
 
 

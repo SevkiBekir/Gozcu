@@ -116,7 +116,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                             <div class="log-input">
                                 <div class="log-input-center">
-                                    <a class="sign-in-form-btn" href="login.php">Giriş Yap</a>
+                                    <a class="sign-in-form-btn" href="<?php baseUrl(1,'login') ?>">Giriş Yap</a>
                                     <div class="clearfix"> </div>
                                 </div>
                             </div>

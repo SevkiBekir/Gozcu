@@ -195,6 +195,13 @@
         
     }
 
+    function fixLink($string){
+        $search = array('%20',);
+        $replace = array('-');
+        $new_text = str_replace($search,$replace,$string);
+        return $new_text;
+    }
+
     function scriptAlert($string){
         echo "<script>window.alert($string);</script>";
     }

@@ -116,8 +116,10 @@ class applications extends BaseModel {
 
         $query=$this->db->get();
         $row=$query->result();
-
-        return $row[0];
+        if($row)
+            return $row[0];
+        else
+            return false;
     }
 
 
