@@ -155,10 +155,11 @@ class applications extends BaseModel {
         $query=$this->db->get();
         $row=$query->result();
 
+
         return $row[0];
     }
 
-    public function getApplicationLevelInfo($catagoryId = NULL,$level = NULL, $name){
+    public function getApplicationLevelInfo($catagoryId = NULL,$level = NULL, $name = NULL){
         $table="applications a";
         $schemeVar=printSchemeName();
         if (findLocalOrNot()==true)

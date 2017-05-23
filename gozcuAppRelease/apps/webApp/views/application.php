@@ -25,7 +25,7 @@ include_once ("header.php");
                     <li>
                         <a href="<?= baseUrl(1, "application/") . "/" . $application["link"] ?>"><?= $application["name"] ?></a>
                     </li>
-                    <li class="active"><?= $level ?></li>
+                    <li class="active">Seviye <?= $level ?></li>
                 </ol>
             </div>
 

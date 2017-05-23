@@ -72,6 +72,7 @@ class data extends BaseModel {
             $query=$this->db->get();
 
             $row=$query->result();
+
             if ($row)
                 return $row;
             else

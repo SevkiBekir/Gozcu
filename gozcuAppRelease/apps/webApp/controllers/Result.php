@@ -61,11 +61,8 @@ class result extends CI_Controller {
         if (!isset($appLink))
             headerLocation("result");
 
-
-        $this->load->model("attempts");
         $this->load->model("applications");
         $this->load->model("catagories");
-
 
         $applicationInfo = $this->applications->getApplicationLink(NULL,$appLink);
         //KONTROL
@@ -75,63 +72,45 @@ class result extends CI_Controller {
 
         $applicationId=$applicationInfo->applicationId;
 
+
         if(!$applicationId)
             headerLocation("result");
-        $username = session('username');
 
-        if(isset($applicationId,$username)){
-            $this->attempts->username = $username;
-            $this->attempts->applicationId = $applicationId;
-            $getAttempts = $this->attempts->getAttemptsForResults();
+        $applicationInfo = $this->applications->getApplicationInfo($applicationId);
+        $levelsOfApplication = $this->applications->getLevelsOfApplication($applicationInfo->name);
 
-            if($getAttempts){
-//                new dBug($getAttempts);
-                $showableStatistics = array();
-                for ($i=0;$i<count($getAttempts)-1;$i++){
+        $dummyArray=[];
+        $i=0;
+        foreach ($levelsOfApplication as $row){
+            $dummyArray['l'.$i]=array(
+                'name'		        => $row->name,
+                'catagoryId'        => $row->catagoryId,
+                'level'             => $row->level,
 
-                    if(($getAttempts[$i]->status == 1) && ($getAttempts[$i+1]->status == 0)){
-                        // Attempt yaptı. Sonra bitti. Bunu check ediyor.
-
-                        $rowSuccessAttempt["start"] = $getAttempts[$i]->time;
-                        $rowSuccessAttempt["finish"] = $getAttempts[$i+1]->time;
-                        $showableStatistics[] = $rowSuccessAttempt;
-                    }
-                }
-
-//                new dBug($showableStatistics);
-                $applicationInfo = $this->applications->getApplicationInfo($applicationId);
-                $applicationCatagoryId = $applicationInfo->catagoryId;
-                $applicationName = $applicationInfo->name;
-
-                $catagoryName = $this->catagories->getCatagoryName($applicationCatagoryId)[0]->name;
-                $catLink = $this -> catagories -> generateLinkAndSave($catagoryName,$applicationCatagoryId);
-
-                $data["filter"] = $showableStatistics;
-                session("filter", $showableStatistics);
-                $data["application"] = array("name" => $applicationName, "link" => $appLink);
-                $data["catagory"] = array("name" => $catagoryName, "link" => $catLink );
-
-//                new dBug($data);
-
-                new dBug($data);
-                //loadView("resultFilter",$data);
-                //loadView("footer");
-            }else{
-                // Attempt yok!
-                headerLocation("result");
-            }
-
-
-        }else{
-            // App, Username yok!
-            headerLocation("result");
+            );
+            $i++;
         }
+        $data["levels"] = $dummyArray;
+        $catagoryName = $this->catagories->getCatagoryName($dummyArray["l0"]["catagoryId"])[0]->name;
+        $link = $this -> catagories -> generateLinkAndSave($catagoryName,$dummyArray["l0"]["catagoryId"]);
+        $dummyArray = array('name' => $catagoryName, 'link' => $link);
+        $data["catagory"] = $dummyArray;
+
+        $data["application"] =array("name"=> $applicationInfo->name,"link"=>$appLink);
+
+//        new dBug($data);
+
+        loadView("resultLevels",$data);
+        loadView("footer");
+
+
 
     }
 
-    public function filter($appLink = NULL){
+    public function filter($appLink = NULL, $level = NULL){
+//        echo "filter controller->$appLink>$level";
         date_default_timezone_set('Europe/Istanbul');
-        if (!isset($appLink))
+        if (!isset($appLink, $level))
             headerLocation("result");
 
         $user = session("username");
@@ -147,7 +126,9 @@ class result extends CI_Controller {
             $this->load->model("data");
             $this->data->username = session("username");
 
+            // Data var mı diye bakıyor?
             if($results = $this->data->getDataForResult($start,$finish)){
+
                 $k=0;
                 foreach ($results as $row){
 //                    new dBug($row);
@@ -201,10 +182,94 @@ class result extends CI_Controller {
 //                new dBug($data);
                 loadView("chart",$data);
                 loadView("footer");
+            }else{
+                // Data yok
+                $appLink = fixLink($appLink);
+                headerLocation("result/application/$appLink/levels/$level");
             }
 
 
 
+        }
+
+    }
+
+    public function levels($appLink = NULL, $level = NULL)
+    {
+
+        if (!isset($appLink,$level))
+            headerLocation("result");
+
+        $this->load->model("attempts");
+        $this->load->model("applications");
+        $this->load->model("catagories");
+
+
+        $applicationInfo = $this->applications->getApplicationLink(NULL,$appLink);
+        //KONTROL
+        if(!$applicationInfo)
+            headerLocation("result");
+
+
+        $applicationId=$applicationInfo->applicationId;
+
+        if(!$applicationId)
+            headerLocation("result");
+        $username = session('username');
+
+        $applicationInfo = $this->applications->getApplicationInfo($applicationId);
+        $applicationCatagoryId = $applicationInfo->catagoryId;
+        $applicationName = $applicationInfo->name;
+
+
+        // Levele göre application id alma.
+        $applicationInfo = $this->applications->getApplicationLevelInfo($applicationCatagoryId,$level,$applicationName);
+        $applicationId = $applicationInfo->id;
+
+        if(isset($applicationId,$username,$level)){
+            $this->attempts->username = $username;
+            $this->attempts->applicationId = $applicationId;
+            $getAttempts = $this->attempts->getAttemptsForResults();
+            if($getAttempts){
+//                new dBug($getAttempts);
+                $showableStatistics = array();
+                for ($i=0;$i<count($getAttempts)-1;$i++){
+
+                    if(($getAttempts[$i]->status == 1) && ($getAttempts[$i+1]->status == 0)){
+                        // Attempt yaptı. Sonra bitti. Bunu check ediyor.
+
+                        $rowSuccessAttempt["start"] = $getAttempts[$i]->time;
+                        $rowSuccessAttempt["finish"] = $getAttempts[$i+1]->time;
+                        $showableStatistics[] = $rowSuccessAttempt;
+                    }
+                }
+
+//                new dBug($showableStatistics);
+                $applicationInfo = $this->applications->getApplicationInfo($applicationId);
+                $applicationCatagoryId = $applicationInfo->catagoryId;
+                $applicationName = $applicationInfo->name;
+
+                $catagoryName = $this->catagories->getCatagoryName($applicationCatagoryId)[0]->name;
+                $catLink = $this -> catagories -> generateLinkAndSave($catagoryName,$applicationCatagoryId);
+
+                $data["filter"] = $showableStatistics;
+                session("filter", $showableStatistics);
+                $data["application"] = array("name" => $applicationName, "link" => $appLink, "level" => $level);
+                $data["catagory"] = array("name" => $catagoryName, "link" => $catLink );
+
+//                new dBug($data);
+                loadView("resultFilter",$data);
+                loadView("footer");
+            }else{
+                // Attempt yok!
+                $appLink = fixLink($appLink);
+                headerLocation("result/application/$appLink");
+            }
+
+
+        }else{
+            // App, Username yok!
+            headerLocation("result");
         }
 
     }

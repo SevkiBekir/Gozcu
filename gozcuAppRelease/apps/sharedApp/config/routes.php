@@ -57,8 +57,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['catagory/(:any)'] = 'catagory/index/$1';
 $route['application/(:any)'] = 'application/index/$1';
 //$route['application/(:any)/levels/'] = 'application/levels/';
-$route['application/(:any)/levels/(:any)'] = 'application/levels/$1/$2';
-$route['result/application/(:any)/filter'] = 'result/filter/$1';
+$route['application/(:any)/levels/(:num)'] = 'application/levels/$1/$2';
+$route['result/application/(:any)'] = 'result/application/$1';
+$route['result/application/(:any)/levels/(:num)'] = 'result/levels/$1/$2';
+$route['result/application/(:any)/levels/(:num)/filter'] = 'result/filter/$1/$2';
 
 
 

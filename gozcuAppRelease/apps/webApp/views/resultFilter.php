@@ -22,7 +22,8 @@ include_once ("header.php");
                     <li><a href="<?=baseUrl(1);?>">Anasayfa</a></li>
                     <li><a href="<?=baseUrl(1,"result");?>">Sonuçlar</a></li>
                     <li><a href="<?=baseUrl(1,"result/catagory/".$catagory['link']);?>"><?=$catagory['name']?></a></li>
-                    <li class="active"><?=$application['name']?></li>
+                    <li><a href="<?=baseUrl(1,"result/application/".$application['link']);?>"><?=$application['name']?></a></li>
+                    <li class="active">Seviye <?=$application['level']?></li>
                 </ol>
             </div>
             <div class="activity_box" style="min-height:250px">
@@ -40,7 +41,7 @@ include_once ("header.php");
 
                                 $dt1 = new DateTime($start);
                                 $dt2 = new DateTime($finish);
-                                echo "<li><a href='".baseUrl(0)."result/application/".$application['name']."/filter?start=".$row['start']."&finish=".$row['finish']."'>".$dt1->format('j M Y g:i A')."-". $dt2->format('j M Y g:i A')."</a>";
+                                echo "<li><a href='".baseUrl(0)."result/application/".$application['name']."/levels/".$application['level']."/filter?start=".$row['start']."&finish=".$row['finish']."'>".$dt1->format('j M Y g:i A')."-". $dt2->format('j M Y g:i A')."</a>";
                             }
                             ?>
 

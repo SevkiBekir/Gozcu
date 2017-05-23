@@ -51,7 +51,7 @@ class application extends CI_Controller {
     }
 
     public function levels($appLink,$num){
-	   // echo $appLink."-> level-> ".$num;
+	    echo $appLink."-> level-> ".$num;
         if(!isset($appLink,$num))
             headerLocation("main");
 

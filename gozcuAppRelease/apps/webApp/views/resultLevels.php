@@ -20,8 +20,9 @@ include_once ("header.php");
             <div>
                 <ol class="breadcrumb">
                     <li><a href="<?=baseUrl(1);?>">Anasayfa</a></li>
+                    <li><a href="<?=baseUrl(1,"result");?>">Sonuçlar</a></li>
                     <li><a href="<?=baseUrl(1,"catagory/")."/".$catagory["link"]?>"><?=$catagory["name"]?></a></li>
-                    <li class="active"><?=$levels["l0"]["name"]?></li>
+                    <li class="active"><?=$application["name"]?></li>
                 </ol>
             </div>
             <div class="activity_box" style="min-height:250px">
@@ -32,7 +33,7 @@ include_once ("header.php");
                             <li></li>
                             <?php
                             foreach ($levels as $row){
-                                echo "<li><a href='".baseUrl(0)."application/".$appLink."/levels/".$row["level"]."'>Seviye ".$row["level"]."</a>";
+                                echo "<li><a href='".baseUrl(0)."result/application/".$application["link"]."/levels/".$row["level"]."'>Seviye ".$row["level"]."</a>";
                             }
                             ?>
 
