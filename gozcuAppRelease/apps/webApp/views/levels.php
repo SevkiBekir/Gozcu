@@ -32,7 +32,10 @@ include_once ("header.php");
                             <li></li>
                             <?php
                             foreach ($levels as $row){
-                                echo "<li><a href='".baseUrl(0)."application/".$appLink."/levels/".$row["level"]."'>Seviye ".$row["level"]."</a>";
+                                echo "<li><a onclick=\"window.open('";
+                                echo baseUrl(1, "application/") . "/" . $appLink."/levels/".$row["level"]."/play";
+                                echo "', '_blank', 'location=no,height=768,width=1366,scrollbars=no,status=no,resizable=no,menubar=no');\">Seviye ".$row["level"]."</a> </li>";
+
                             }
                             ?>
 
@@ -40,6 +43,22 @@ include_once ("header.php");
                     </div>
                 </div>
             </div>
+
+            <div class="activity_box activity_box1" style="min-height:250px">
+                <h3><?=$application["name"]?> Oyunu Yönergesi</h3>
+                <div class="activity-row activity-row1">
+                    <div class="single-bottom">
+                        <ul>
+                            <li></li>
+                            <li><?php
+                                echo $text;
+                                ?></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="clearfix"></div>
 
         </div>

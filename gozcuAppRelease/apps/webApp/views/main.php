@@ -32,8 +32,8 @@ include_once("header.php");
                     <div class="single-bottom">
                         <ul>
                             <li></li>
-                            <li>- Gözcü uygulaması hayata geçirilmiştir. </li>
-                            <li>- Uygulamalarımız sürekli güncellenmektedir. </li>
+                            <li>Egzersizlere ulaşmak için sol sütündeki menüyü kullanabilirsiniz.</li>
+
                         </ul>
                     </div>
                 </div>

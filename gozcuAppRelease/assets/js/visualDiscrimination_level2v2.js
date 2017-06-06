@@ -8,7 +8,7 @@ var loadedGoogleCount = 0;
 var gFontsUpdateCacheList = [];
 var tFontsUpdateCacheList = [];
 lib.ssMetadata = [
-		{name:"visualDiscrimination_level2v1_atlas_", frames: [[1510,2523,96,128],[1002,2777,128,96],[1135,2756,96,128],[1386,2676,96,128],[1608,2600,128,96],[1510,2653,96,128],[1934,2603,96,128],[1608,2698,128,96],[1738,2600,96,128],[1836,2603,96,128],[1256,2676,128,96],[1738,2730,96,128],[1882,1581,131,233],[1882,1816,146,190],[1484,2783,93,86],[1233,2774,146,68],[1368,527,610,525],[1368,1054,610,525],[1368,0,610,525],[0,780,1366,768],[1882,2008,59,78],[0,1550,1366,768],[1368,2095,263,273],[1858,2447,173,154],[1002,2644,131,131],[1002,2473,268,169],[1620,2447,236,151],[1272,2523,236,151],[1633,2095,406,174],[1633,2271,406,174],[1311,2370,307,151],[1002,2320,307,151],[1135,2644,119,110],[0,0,1366,778],[1368,1581,512,512],[0,2320,1000,1000]]}
+		{name:"visualDiscrimination_level2v2_atlas_", frames: [[1368,2241,96,128],[1368,2371,128,96],[1368,2111,96,128],[1466,2111,96,128],[1516,1840,128,96],[1677,1166,96,128],[1638,1493,96,128],[1516,1938,128,96],[1466,2241,96,128],[1368,2469,96,128],[1466,2469,128,96],[1564,2036,96,128],[1368,1684,131,233],[1368,1919,146,190],[1736,1493,93,86],[1646,1840,146,68],[1002,3090,610,525],[1368,527,610,525],[1368,0,610,525],[0,1550,1366,768],[1771,1296,59,78],[0,2320,1366,768],[1002,3617,263,273],[1501,1684,173,154],[1638,1360,131,131],[1368,1360,268,169],[1002,3892,236,151],[1368,1531,236,151],[1267,3617,406,174],[1267,3793,406,174],[1368,1054,307,151],[1368,1207,307,151],[1677,1054,119,110],[0,0,1366,778],[0,3090,1000,1000],[0,780,1366,768]]}
 ];
 
 
@@ -22,7 +22,7 @@ lib.updateListCache = function (cacheList) {
 
 lib.addElementsToCache = function (textInst, cacheList) {		
 	var cur = textInst;		
-	while(cur != exportRoot) {		
+	while(cur != null && cur != exportRoot) {		
 		if(cacheList.indexOf(cur) != -1)		
 			break;		
 		cur = cur.parent;		
@@ -30,7 +30,7 @@ lib.addElementsToCache = function (textInst, cacheList) {
 	if(cur != exportRoot) {		
 		var cur2 = textInst;		
 		var index = cacheList.indexOf(cur);		
-		while(cur2 != cur) {		
+		while(cur2 != null && cur2 != cur) {		
 			cacheList.splice(index, 0, cur2);		
 			cur2 = cur2.parent;		
 			index++;		
@@ -38,7 +38,7 @@ lib.addElementsToCache = function (textInst, cacheList) {
 	}		
 	else {		
 		cur = textInst;		
-		while(cur != exportRoot) {		
+		while(cur != null && cur != exportRoot) {		
 			cacheList.push(cur);		
 			cur = cur.parent;		
 		}		
@@ -73,252 +73,252 @@ lib.tfontAvailable = function(family, totalTypekitCount) {
 
 
 (lib._2sn_n = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._2sn_t = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._2sn_u = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._4sn_n = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._4sn_t = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._4sn_u = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._6sn_n = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._6sn_t = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._6sn_u = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._8sn_n = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._8sn_t = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._8sn_u = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(11);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.adamyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(12);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.agacyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(13);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.akbabayeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(14);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.bulutyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.button1 = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(16);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.button2 = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(17);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.button3 = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(18);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.ciftlikyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(19);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.civcivyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(20);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.colyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(21);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.deveyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(22);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.evyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(23);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.gunesyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(24);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.inekyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(25);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.kitap21 = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(26);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.kitap21_1 = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(27);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.kitaptıklandığında = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(28);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.kitaptıklandığında_1 = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(29);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.kitapüzerinegelindiğinde = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(30);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.kitapüzerinegelindiğinde_1 = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(31);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.kusyeni = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(32);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.orjinalarkaplan = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(33);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.retry = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+(lib.tick = function() {
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(34);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.tick = function() {
-	this.spriteSheet = ss["visualDiscrimination_level2v1_atlas_"];
+(lib.uygulamabitiş = function() {
+	this.spriteSheet = ss["visualDiscrimination_level2v2_atlas_"];
 	this.gotoAndStop(35);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -5534,20 +5534,6 @@ p.nominalBounds = new cjs.Rectangle(-46.5,-43,93,86);
 p.nominalBounds = new cjs.Rectangle(-65.5,-116.5,131,233);
 
 
-(lib.btnYeniden = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Layer 1
-	this.instance = new lib.retry();
-	this.instance.parent = this;
-	this.instance.setTransform(0,0,0.539,0.539);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,275.8,275.8);
-
-
 (lib.btnBaslaDiyor = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -5718,7 +5704,7 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 
 
 // stage content:
-(lib.visualDiscrimination_level2v1 = function(mode,startPosition,loop) {
+(lib.visualDiscrimination_level2v2 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
@@ -5859,7 +5845,10 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 		}
 		
 		function btnStart_Click (){
-			this.gotoAndPlay(1);
+			var story = document.getElementsByTagName("storyselection").value;
+			var dur = document.getElementsByTagName("duration").value;
+			if(story !== undefined && dur !== undefined)
+				this.gotoAndPlay(1);
 		}
 		
 		
@@ -5899,6 +5888,8 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 		
 		var mouseOverTime,isMouseOut, tickerTime, currentObject, currentObjectIndex, currentLoader;
 		
+		var count = 0;
+		var selected = [false,false,false,false,false];
 		
 		var duration = document.getElementsByTagName("duration").value;
 		var storySelection = document.getElementsByTagName("storyselection").value;
@@ -5962,18 +5953,28 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 				objectArray[i].addEventListener("mouseover", object_MouseOver.bind(objectArray[i]));
 			}
 		}
-		var count = 0;
+		
+		function checkObjectIsDone(){
+			findIndex();
+			if(selected[currentObjectIndex])
+				return true;
+			else
+				return false;
+			
+		}
+		
 		function eventTickerForObjects(event){
-			if(!isMouseOut){
+			if((!isMouseOut) && !checkObjectIsDone()){
 				tickerTime = createjs.Ticker.getTime()/1000;
 				var diff = tickerTime - mouseOverTime;
-				//console.log("diff->",diff);
 				if(diff>duration){
 					mouseOverTime = tickerTime;
 					findIndex();
 					tickArray[currentObjectIndex].visible = true;
+					selected[currentObjectIndex] = true;
 					currentObject.mouseEnabled = false;
 					count++;
+					mouseOverTime = 0;
 					if(count==5){
 						object_MouseOut();
 						localThis.gotoAndStop(3);
@@ -5983,7 +5984,6 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 			}
 			
 		}
-		
 		function object_MouseOut(event){
 			createjs.Ticker.removeEventListener("tick", eventTickerForObjects);
 			isMouseOut = true;
@@ -6105,6 +6105,8 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 		
 		var mouseOverTime,isMouseOut, tickerTime, currentObject, currentObjectIndex, currentLoader;
 		
+		var count = 0;
+		var selected = [false,false,false,false,false];
 		
 		var duration = document.getElementsByTagName("duration").value;
 		var storySelection = document.getElementsByTagName("storyselection").value;
@@ -6165,22 +6167,33 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 				objectArray[i].addEventListener("mouseover", object_MouseOver.bind(objectArray[i]));
 			}
 		}
-		var count = 0;
+		
+		function checkObjectIsDone(){
+			findIndex();
+			if(selected[currentObjectIndex])
+				return true;
+			else
+				return false;
+			
+		}
+		
 		function eventTickerForObjects(event){
-			if(!isMouseOut){
+			if((!isMouseOut) && !checkObjectIsDone()){
 				tickerTime = createjs.Ticker.getTime()/1000;
 				var diff = tickerTime - mouseOverTime;
-				//console.log("diff->",diff);
 				if(diff>duration){
 					mouseOverTime = tickerTime;
 					findIndex();
 					tickArray[currentObjectIndex].visible = true;
+					selected[currentObjectIndex] = true;
 					currentObject.mouseEnabled = false;
 					count++;
+					mouseOverTime = 0;
 					if(count==5){
 						object_MouseOut();
 						localThis.gotoAndStop(3);
 					}
+					
 				}
 			}
 			
@@ -6286,9 +6299,6 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 		this.stop();
 		var localThis = this;
 		stopAttempt();
-		var btnYeniden = this.btnYeniden;
-		
-		btnYeniden.addEventListener("click", btnYeniden_Click.bind(this));
 		
 		function stopAttempt(){
 			var siteURL = "http://gozcu.ceit.metu.edu.tr/app/";
@@ -6305,10 +6315,21 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 			
 		}
 		
-		
-		function btnYeniden_Click(event){
-			location.reload();
+		function startTicker(){
+			
+			createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+			createjs.Ticker.setFPS(60);
+			
 		}
+		
+		function getClose(){
+			tickerTime = createjs.Ticker.getTime()/1000;
+			var diff = tickerTime - time;
+			if(diff>5)
+				self.close();
+		}
+		time = createjs.Ticker.getTime()/1000;
+		createjs.Ticker.addEventListener("tick", getClose);
 	}
 
 	// actions tween:
@@ -6476,25 +6497,12 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 
 	this.timeline.addTween(cjs.Tween.get(this.btnObj12).wait(1).to({_off:false},0).to({_off:true},1).wait(2));
 
-	// btnYeniden
-	this.btnYeniden = new lib.btnYeniden();
-	this.btnYeniden.parent = this;
-	this.btnYeniden.setTransform(676.9,510.9,1,1,0,0,0,137.9,137.9);
-	this.btnYeniden._off = true;
-	new cjs.ButtonHelper(this.btnYeniden, 0, 1, 1);
-
-	this.timeline.addTween(cjs.Tween.get(this.btnYeniden).wait(3).to({_off:false},0).wait(1));
-
 	// text
-	this.text = new cjs.Text("OYUN BAŞARILI BİR ŞEKİLDE BİTTİ", "bold 110px 'BourgeoisTRUBol'", "#FFFF00");
-	this.text.lineHeight = 96;
-	this.text.lineWidth = 814;
-	this.text.parent = this;
-	this.text.setTransform(291.9,132.6);
-	this.text.shadow = new cjs.Shadow("rgba(0,0,0,1)",3,3,7);
-	this.text._off = true;
+	this.instance = new lib.uygulamabitiş();
+	this.instance.parent = this;
+	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.text).wait(3).to({_off:false},0).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(3).to({_off:false},0).wait(1));
 
 	// btn
 	this.btnStart = new lib.btnBaslaDiyor();
@@ -6595,21 +6603,21 @@ p.nominalBounds = new cjs.Rectangle(-73,-95,146,190);
 	this.timeline.addTween(cjs.Tween.get(this.btnSelectPlaj).to({_off:true},1).wait(3));
 
 	// background
-	this.instance = new lib.orjinalarkaplan();
-	this.instance.parent = this;
-	this.instance.setTransform(1,0);
-
-	this.instance_1 = new lib.colyeni();
+	this.instance_1 = new lib.orjinalarkaplan();
 	this.instance_1.parent = this;
+	this.instance_1.setTransform(1,0);
 
-	this.instance_2 = new lib.ciftlikyeni();
+	this.instance_2 = new lib.colyeni();
 	this.instance_2.parent = this;
+
+	this.instance_3 = new lib.ciftlikyeni();
+	this.instance_3.parent = this;
 
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f("#94EFF2").s().p("EhqtA8AMAAAh3/MDVbAAAMAAAB3/g");
 	this.shape.setTransform(683,384);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).to({state:[{t:this.shape}]},1).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1}]}).to({state:[{t:this.instance_2}]},1).to({state:[{t:this.instance_3}]},1).to({state:[{t:this.shape}]},1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(684,384,1366,778);
@@ -6622,8 +6630,8 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-        {src:assetAddres + "images/visualDiscrimination_level2v1_atlas_.png", id:"visualDiscrimination_level2v1_atlas_"},
-        {src:assetAddres + "sounds/complete.mp3", id:"complete"},
+		{src:assetAddres + "images/visualDiscrimination_level2v2_atlas_.png", id:"visualDiscrimination_level2v2_atlas_"},
+		{src:assetAddres + "sounds/complete.mp3", id:"complete"}
 	],
 	preloads: []
 };
